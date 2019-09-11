@@ -47,27 +47,23 @@
      <form class="w3-container">
 
        <label>Start here</label>
-       <input class="w3-input w3-border" type="text">
+       <input class="w3-input w3-border" type="text" autocomplete="off" autofocus id="cli_input" oninput="on_cli_input()">
 
      </form>
 
   </div>
 
     <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-          <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-              <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-                <i class="fa fa-twitter w3-hover-opacity"></i>
-                  <i class="fa fa-linkedin w3-hover-opacity"></i>
-                    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <footer class="w3-container w3-bottom w3-padding-16 w3-center w3-opacity w3-light-grey w3-xlarge">
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </footer>
 
   <script>
     // Automatic Slideshow - change image every 4 seconds
     var myIndex = 0;
-carousel();
+
+<!-- carousel(); -->
 
 function carousel() {
     var i;
@@ -98,6 +94,12 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function on_cli_input() {
+  var input = document.getElementById("cli_input").value;
+  console.log("Just log: " + input);
+}
+
 </script>
 
 </body>
